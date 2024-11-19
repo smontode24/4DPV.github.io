@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="4DPV: 4D Pet from Videos by Coarse-to-Fine Non-Rigid Radiance Fields.">
+  <meta name="keywords" content="Nerfies, D-NeRF, NeRF">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>4DPV: 4D Pet from Videos by Coarse-to-Fine Non-Rigid Radiance Fields</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">4DPV: 4D Pet from Videos by Coarse-to-Fine Non-Rigid Radiance Fields</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              Sergio M. de Paco<sup>1</sup>,</span>
+            <span class="author-block">
+              Antonio Agudo<sup>1</sup>
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>Institut de Robòtica i Informàtica Industrial CSIC-UPC, Barcelona, Spain</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="https://arxiv.org/"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/smontode24/4DPV"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+              <!-- Dataset Link. -->
+              <span class="link-block">
+                <a href="https://github.com/smontode24/4DPV"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="far fa-images"></i>
+                  </span>
+                  <span>Data</span>
+                  </a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <img src="./static/images/intro_fig.png"
+       alt="Intro 4DPV."/>
+      <h2 class="subtitle has-text-centered">
+        Given multiple monocular videos of an unknown and dynamic object shape with non-controlled illumination conditions, our method can learn a coarse-to-fine neural deformation model without considering any 3D template or the camera locations.
+      </h2>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            We present a coarse-to-fine neural deformation model to simultaneously recover the camera pose and the 4D reconstruction of an unknown object from multiple RGB sequences in the wild. To that end, our approach does not consider any pre-built 3D template nor 3D training data as well as controlled illumination conditions, and can sort out the problem in a self-supervised manner. Our model exploits canonical and image-variant spaces where both coarse and fine components are considered. We introduce a neural local quadratic model with spatio-temporal consistency to encode fine details that is combined with canonical embeddings in order to establish correspondences across sequences. We thoroughly validate the method on challenging scenarios with complex and real-world deformations, providing both quantitative and qualitative evaluations, an ablation study and a comparison with respect to competing approaches.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+    <!-- Paper video. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Video</h2>
+        <video class="dollyzoom" autoplay controls muted loop playsinline height="100%">
+          <source src="./static/videos/4DPV_Supplementary_Material_compressed.mp4"
+                  type="video/mp4">
+        </video>
+      </div>
+    </div>
+    <!--/ Paper video. -->
+
+        <!-- Method. -->
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+            <h2 class="title is-3">Method</h2>
+            <div class="content has-text-justified">
+              <p>
+                In 4DPV, we propose to combine the LBS model to capture coarse deformations with a local quadratic deformation model to capture the fine ones.
+              </p>
+            </div>
+            <!-- Method figure. -->
+            <img src="./static/images/4dpv_method.png" alt="Method of 4DPV."/>
+          </div>
+        </div>
+        <!--/ Method. -->
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Results. -->
+    <div class="columns is-centered">
+      
+      <!-- Separate videos. -->
+      <div class="column is-full-width">
+        <h2 class="title is-3">Comparison with SoTA</h2>
+        <div class="content has-text-centered">
+          <img src="./static/images/4dpv_vs_banmo.png" alt="Results of 4DPV."/>
+        </div>
+        <div class="content has-text-justified">
+              <p>
+                casual-cat, adult-5, eagle and casual-dog results comparison. Top: Some pictures in the input dataset. Middle: 3D color mesh inferred by BANMo. Bottom: Our estimation. In all cases, meshes are extracted with marching cubes at a resolution grid of 1024.
+              </p>
+            </div>
+        <br/>
+
+        <h2 class="title is-3">Video results</h2>
+        <h3 class="title is-4">cat-pikachu</h3>
+        <div class="content has-text-centered">
+          <video id="replay-video"
+                 controls
+                 muted
+                 preload
+                 playsinline
+                 width="75%">
+            <source src="./static/videos/4dpv_cat.mp4" 
+                    type="video/mp4"> <!--/ Add video segment of result here. -->
+          </video>
+        </div>
+        <h3 class="title is-4">dog</h3>
+        <div class="content has-text-centered">
+          <video id="replay-video"
+                 controls
+                 muted
+                 preload
+                 playsinline
+                 width="75%">
+            <source src="./static/videos/4dpv_dog.mp4" 
+                    type="video/mp4"> <!--/ Add video segment of result here. -->
+          </video>
+        </div>
+        <br/>
+
+      </div>
+    </div>
+
+    <!-- Concurrent Work. -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Related Links</h2>
+
+        <div class="content has-text-justified">
+          <p>
+            There's a lot of excellent work that was introduced while we were working on 4DPV:
+          </p>
+          <p>
+            <a href="https://3dmagicpony.github.io/">MagicPony</a> adopts a hybrid representation based on SDF and differentiable Marching Tetrahedra.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Concurrent Work. -->
+
+  </div>
+</section>
+
+<!--
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@article{park2021nerfies,
+  author    = {Park, Keunhong and Sinha, Utkarsh and Barron, Jonathan T. and Bouaziz, Sofien and Goldman, Dan B and Seitz, Steven M. and Martin-Brualla, Ricardo},
+  title     = {Nerfies: Deformable Neural Radiance Fields},
+  journal   = {ICCV},
+  year      = {2021},
+}</code></pre>
+  </div>
+</section>
+-->
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <a class="icon-link"
+         href="./static/videos/nerfies_paper.pdf">
+        <i class="fas fa-file-pdf"></i>
+      </a>
+      <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is created following <a
+            href="https://nerfies.github.io/">Nerfies' template</a>, which is licensed under a <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+          <p>
+            This means you are free to borrow the <a
+              href="https://github.com/nerfies/nerfies.github.io">source code</a> of the <a
+              href="https://nerfies.github.io/">website</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
